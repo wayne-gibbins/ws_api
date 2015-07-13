@@ -1,0 +1,10 @@
+services:
+    - redis
+dev:
+  box: python:2.7
+  steps:
+    - pip-install
+    - internal/watch:
+        name: start API server
+        code: |
+            python app.py
