@@ -8,3 +8,12 @@ dev:
         name: start API server
         code: |
             python app.py
+build:
+  box: python:2.7
+  steps:
+    - pip-install
+    - internal/docker-push:
+      username: $docker_user
+      password: $docker_pass
+      repository: tonnu/mattapi
+      cmd: python /pipeline/source/app.py
