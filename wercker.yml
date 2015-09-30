@@ -16,4 +16,5 @@ build:
       username: $docker_user
       password: $docker_pass
       repository: tonnu/mattapi
-      cmd: python /pipeline/source/app.py
+      cmd: "python /pipeline/source/app.py"
+      ports: "8080, 8081"
