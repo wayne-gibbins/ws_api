@@ -13,7 +13,7 @@ build:
   steps:
     - pip-install
     - internal/docker-push:
-      username: $docker_user
-      password: $docker_pass
+      username: $DOCKER_USERNAME
+      password: $DOCKER_PASSWORD
       repository: wercker/api
       cmd: "python /pipeline/source/app.py"
